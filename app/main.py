@@ -1,12 +1,13 @@
 from fastapi import FastAPI
 import joblib
 import pandas as pd
+from pathlib import Path
 
-from app.schemas import HeartDiseaseInput
+from .schemas import HeartDiseaseInput
 
 
-# Load model
-model = joblib.load("model/heart_model.joblib")
+BASE_DIR = Path(__file__).resolve().parent.parent
+model = joblib.load(BASE_DIR / "model" / "heart_model.joblib")
 
 
 # Feature order
