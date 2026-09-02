@@ -160,7 +160,7 @@ Example response:
 
 ```json
 {
-  "heart_disease": true
+  "heart_disease": false
 }
 ```
 
@@ -196,20 +196,6 @@ Swagger:
 http://localhost:8000/docs
 ```
 
-## Deployment
-
-The application can be deployed to Render as a Docker Web Service.
-
-Deployment steps:
-
-1. Push the project to GitHub.
-2. Create a new Web Service on Render.
-3. Connect the GitHub repository.
-4. Select Docker as the environment.
-5. Use the project root as the Docker build context.
-6. Deploy the service.
-7. Test `/health`, `/info`, and `/predict`.
-
 ## Live Deployment
 
 Render URL:
@@ -223,4 +209,3 @@ Swagger:
 ```text
 https://heart-disease-firstapi.onrender.com/docs
 ```
-
